@@ -1,4 +1,4 @@
-const express=require("Express");
+const express=require("express");
 const app=express();
 const path=require("path");
 const sqlite3=require("sqlite3");
@@ -16,13 +16,13 @@ const objectSnakeToCamel=(newObject)=>{
 
 const districtSnakeToCamel=(newObject)=>{
     return{
-        districtId=newObject.district_id,
-        districtName=newObject.district_name,
-        stateId=newObject.state_id,
-        cases=newObject.cases,
-        cured=newObject.cured,
-        active=newObject.active,
-        deaths=newObject.deaths,
+        districtId: newObject.district_id,
+        districtName: newObject.district_name,
+        stateId: newObject.state_id,
+        cases: newObject.cases,
+        cured: newObject.cured,
+        active: newObject.active,
+        deaths: newObject.deaths,
     };
 };
  const reportSnakeToCamelCase=(newObject)=>{
@@ -37,7 +37,7 @@ const districtSnakeToCamel=(newObject)=>{
      try{
          db= await open ({
              filename:dbPath,
-             driver:sqlite3.DataBase,
+             driver:sqlite3.Database,
          });
      app.listen(3000,()=>{
          console.log("SerVer is Running");
