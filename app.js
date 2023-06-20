@@ -40,7 +40,7 @@ const districtSnakeToCamel=(newObject)=>{
              driver:sqlite3.Database,
          });
      app.listen(3000,()=>{
-         console.log("SerVer is Running");
+         console.log("Server is Running at http://localhost:3000/");
      });
      } catch (e){
          console.log(`error ${e.message}`);
